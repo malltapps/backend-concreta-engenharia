@@ -1,0 +1,13 @@
+APP_URL=http://localhost:3333
+NODE_ENV=development
+APP_SECRET=malltcms
+DB_HOST=149.56.248.166
+DB_USER=concreta_bd
+DB_PASS=Fri*u9]PB0tu
+DB_NAME=concreta_bd
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USER=231b64eeaf79d1
+MAIL_PASS=11705e1627f283
+SENTRY_DSN=
+
