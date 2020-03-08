@@ -9,8 +9,8 @@ var _express = require("express");
 var _express2 = _interopRequireDefault(_express);
 var _cors = require("cors");
 var _cors2 = _interopRequireDefault(_cors);
-var _youch = require("youch");
-var _youch2 = _interopRequireDefault(_youch);
+//var _youch = require("youch");
+//var _youch2 = _interopRequireDefault(_youch);
 var _routes = require("./routes");
 var _routes2 = _interopRequireDefault(_routes);
 require("./database");
@@ -20,7 +20,7 @@ class App {
     this.server = _express2.default.call(void 0);
     this.middlewares();
     this.routes();
-    this.exceptionHandler();
+    /* this.exceptionHandler();*/
   }
 
   middlewares() {
@@ -31,17 +31,17 @@ class App {
   routes() {
     this.server.use(_routes2.default);
   }
-  exceptionHandler() {
+  /*exceptionHandler() {
     this.server.use(async (err, req, res, next) => {
-      /* if (process.env.NODE_ENV === "development") {
+       if (process.env.NODE_ENV === "development") {
         const errors = await new (0, _youch2.default)(err, req).toJSON();
         return res.status(500).json(errors);
-      }*/
+      }
       return res.status(500).json({
         error: "Internal Server Error",
       });
     });
-  }
+  }*/
 }
 
 exports.default = new App().server;
